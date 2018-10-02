@@ -1,0 +1,29 @@
+
+<div *ngIf = '(!instructors) || instructors.length == 0'>
+    <h3>Non ci sono instruttori</h3>
+</div>
+
+<table *ngIf = 'instructors && instructors.length'
+class="table" id="myTable">
+    <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Data di nascita</th>
+        <th>Età</th>
+        <th>Tipo docente</th>
+        <th>Codice fiscale</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ='let instructor of instructors'>
+            <td>{{instructor.Nome}}</td>
+            <td>{{instructor.Cognome}}</td>
+            <td>{{instructor.DataNascita | date}}</td>
+            <td>{{instructor.Eta}}</td>
+            <td>{{instructor.TipoDocente}}</td>
+            <td>{{instructor.CF}}</td>
+        </tr>
+    </tbody>
+</table>
