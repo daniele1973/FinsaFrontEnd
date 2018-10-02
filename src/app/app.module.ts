@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { InstructorModule } from './instructors/instructor.module';
+import { InstructorDetailsComponent } from './instructor-details/instructor-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    // InstructorDetailsComponent
   ],
   imports: [
     BrowserModule,

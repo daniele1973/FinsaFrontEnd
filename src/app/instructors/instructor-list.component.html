@@ -18,7 +18,9 @@ class="table" id="myTable">
     </thead>
     <tbody>
         <tr *ngFor ='let instructor of instructors'>
-            <td>{{instructor.nome}}</td>
+            <td><a [routerLink]="['/instructors',  instructor.idDocente]">
+                {{instructor.nome}}
+                </a> </td>
             <td>{{instructor.cognome}}</td>
             <td>{{instructor.dataNascita | date}}</td>
             <td>{{instructor.eta}}</td>
