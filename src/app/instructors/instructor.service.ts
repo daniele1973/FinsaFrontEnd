@@ -13,7 +13,7 @@ export class InstructorService{
     constructor(private http:HttpClient){
 
     }
-    instructorUrl : string = 'http://localhost:56871/api/Docente/';
+    instructorUrl : string = 'http://localhost:56871/api/Docenti/';
     
     /*
     instructors : Instructor[] = [
