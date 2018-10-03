@@ -4,13 +4,14 @@ import { Instructor } from "./instructor";
 import { Observable } from "rxjs";
 
 @Component ({
-    templateUrl:'instructor-list.component.html'
-
+    templateUrl:'instructor-list.component.html',
+    styleUrls: ['../courses/courses.component.css']
 })
 export class InstructorListComponent  implements OnInit{
     
     instructors : Instructor[] = [];
     errorMessage : string = "tutto OK";
+
     constructor(private instructorService: InstructorService){
 
     }

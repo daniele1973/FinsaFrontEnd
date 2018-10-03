@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
  import { CoursesComponent } from "./courses.component";
 import { CommonModule } from "@angular/common";
+import { CourseDetailsComponent } from "../course-details/course-details.component";
 // import { InstructorDetailsComponent } from "../instructor-details/instructor-details.component";
 
 @NgModule({
@@ -9,11 +10,12 @@ import { CommonModule } from "@angular/common";
         CommonModule,
         RouterModule.forChild([
             {path:'courses', component : CoursesComponent},
-            // {path:'instructors/:id', component : InstructorDetailsComponent}
+            {path:'courses/:id', component : CourseDetailsComponent}
         ])
     ],
     declarations: [
         CoursesComponent,
+        CourseDetailsComponent
         // InstructorDetailsComponent
     ]
 })

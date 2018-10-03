@@ -1,3 +1,20 @@
 <p>
   courses works!
 </p>
+<table>
+  <thead>
+    <th>IdCorso</th>
+    <th>TitoloCorso</th>
+    <th>PrezzoBase</th>
+    <th>Difficolt&agrave;</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of courses">
+      <!-- <app-course [course]="item"></app-course> -->
+      <td>{{item.idCorso}}</td>
+      <td><a [routerLink]="['/courses',  item.idCorso]">{{item.titolo}}</a></td>
+      <td>{{item.prezzoBase}}</td>
+      <td>{{item.difficolta}}</td>
+    </tr>
+  </tbody>
+</table>

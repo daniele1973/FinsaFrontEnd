@@ -1,0 +1,12 @@
+th{
+    text-align: left;
+    border: 20mm;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+    border-color: red;
+}
+

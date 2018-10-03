@@ -11,6 +11,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CoursesModule } from './courses/courses.module';
 import { StudentModule } from "./student/student.module";
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     WelcomeComponent,
     // CourseListComponent, NON ESISTE PIU
     StudentDetailsComponent,
+    // CourseDetailsComponent //, questo ce lo mette automaticamente "ng gc course-details", ma non va messo in questo modulo bensì nel courses.module.ts
     // InstructorDetailsComponent
   ],
   imports: [
@@ -26,7 +28,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     RouterModule.forRoot([
       {path: 'home', component: WelcomeComponent},
       {path: '' , redirectTo: 'home',pathMatch: 'full'},
-      {path:'**', redirectTo:'home',pathMatch:'full'},
+      {path:'**', redirectTo:'home',pathMatch:'full'}
     ]),
     CoursesModule,
     InstructorModule,StudentModule 

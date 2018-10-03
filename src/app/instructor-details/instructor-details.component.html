@@ -1,3 +1,14 @@
 
-  <h1>Dettaglio del docente Id={{instructor.idDocente}}</h1>
 
+  <h1>Dettaglio del docente Id={{instructor?.idDocente}}</h1>
+
+  <table>
+      <tr><th>IdDocente:</th><td>{{instructor?.idDocente}}</td></tr>
+      <tr><th>Nome:</th> <td>{{instructor?.nome}}</td> </tr>
+      <tr><th>Cognome:</th> <td>{{instructor?.cognome}}</td> </tr>
+      <tr><th>Data di Nascita:</th> <td>{{instructor?.dataNascita}}</td> </tr>
+      <tr><th>Et&agrave;:</th> <td>{{instructor?.eta}}</td> </tr>
+      <tr><th>Tipo Docente:</th> <td>{{instructor?.tipoDocente}}</td> </tr>
+      <tr><th>Codice Fiscale:</th> <td>{{instructor?.cf}}</td> </tr>
+
+    </table>
