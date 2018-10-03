@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { InstructorModule } from './instructors/instructor.module';
 import { InstructorDetailsComponent } from './instructor-details/instructor-details.component';
+import { StudentModule } from "./student/student.module";
 
 @NgModule({
   declarations: [
@@ -19,9 +20,9 @@ import { InstructorDetailsComponent } from './instructor-details/instructor-deta
     RouterModule.forRoot([
       {path: 'home', component: WelcomeComponent},
       {path: '' , redirectTo: 'home',pathMatch: 'full'},
-      {path:'**', redirectTo:'home',pathMatch:'full'}
+      {path:'**', redirectTo:'home',pathMatch:'full'},
     ]),
-    InstructorModule
+    InstructorModule,StudentModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
