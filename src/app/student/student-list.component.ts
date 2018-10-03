@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
     templateUrl:'./student.component.html'
 
 })
-export class StudentListComponent  {
+export class StudentListComponent implements OnInit{
     students : Student[] = [];
     errorMessage : string = "tutto OK";
     constructor(private studentService: StudentService){
