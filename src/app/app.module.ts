@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { InstructorModule } from './instructors/instructor.module';
 import { InstructorDetailsComponent } from './instructor-details/instructor-details.component';
+// import { CourseListComponent } from './course-list/course-list.component'; NON ESISTE PIU
+import { CoursesComponent } from './courses/courses.component';
+import { CoursesModule } from './courses/courses.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
+    // CourseListComponent, NON ESISTE PIU
     // InstructorDetailsComponent
   ],
   imports: [
@@ -21,7 +25,7 @@ import { InstructorDetailsComponent } from './instructor-details/instructor-deta
       {path: '' , redirectTo: 'home',pathMatch: 'full'},
       {path:'**', redirectTo:'home',pathMatch:'full'}
     ]),
-    InstructorModule
+    InstructorModule, CoursesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
