@@ -5,7 +5,8 @@ import { Observable } from "rxjs";
 
 @Component ({
     selector: 'router-outlet',
-    templateUrl:'./student.component.html'
+    templateUrl:'./student.component.html',
+    styleUrls: ['../courses/courses.component.css']
 
 })
 export class StudentListComponent implements OnInit{
@@ -17,7 +18,7 @@ export class StudentListComponent implements OnInit{
 
     ngOnInit(): void {
        let  observableResult : Observable<Student[]>
-        =  this.studentService.getAllInstructors();
+        =  this.studentService.getAllStudents();
 
         observableResult.subscribe(
             instr => this.students = instr,

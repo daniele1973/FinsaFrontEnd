@@ -18,7 +18,7 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     AppComponent,
     WelcomeComponent,
     // CourseListComponent, NON ESISTE PIU
-    StudentDetailsComponent,
+    // StudentDetailsComponent,
     // CourseDetailsComponent //, questo ce lo mette automaticamente "ng gc course-details", ma non va messo in questo modulo bensì nel courses.module.ts
     // InstructorDetailsComponent
   ],

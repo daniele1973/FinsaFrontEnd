@@ -1,6 +1,3 @@
-<p>
-  courses works!
-</p>
 <table>
   <thead>
     <th>IdCorso</th>
@@ -10,7 +7,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of courses">
-      <!-- <app-course [course]="item"></app-course> -->
       <td>{{item.idCorso}}</td>
       <td><a [routerLink]="['/courses',  item.idCorso]">{{item.titolo}}</a></td>
       <td>{{item.prezzoBase}}</td>

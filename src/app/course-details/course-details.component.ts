@@ -14,10 +14,9 @@ export class CourseDetailsComponent implements OnInit {
   course: Course | undefined;
   errorMessage: "Nituccia";
 
-
-  constructor(private route: ActivatedRoute,
-    private router: Router,
-    private productService: CourseService) {
+  constructor(private route :ActivatedRoute,
+    private router :Router,
+    private productService :CourseService) {
   }
 
   ngOnInit() {

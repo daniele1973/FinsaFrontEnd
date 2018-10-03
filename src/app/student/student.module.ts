@@ -15,6 +15,7 @@ import { StudentDetailsComponent } from "../student-details/student-details.comp
     ],
     declarations: [
         StudentListComponent,
+        StudentDetailsComponent
     ]
 })
 export class StudentModule{

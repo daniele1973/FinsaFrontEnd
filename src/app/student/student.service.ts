@@ -15,7 +15,7 @@ export class StudentService{
     }
     studentUrl : string = 'http://localhost:56871/api/Allievi/';
 
-    getAllInstructors() : Observable<Student[]>{
+    getAllStudents() : Observable<Student[]>{
        // return this.instructors;
         return this.http.get<Student[]>(this.studentUrl).pipe(
             tap(d => console.log(JSON.stringify(d)))
