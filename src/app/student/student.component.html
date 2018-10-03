@@ -1,0 +1,26 @@
+
+<div *ngIf = '(!students) || students.length == 0'>
+  <h3>Non ci sono instruttori</h3>
+</div>
+
+<table *ngIf = 'students && students.length'
+class="table" id="myTable">
+  <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Codice Fiscale</th>
+        <th>Tipo Studente</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor ='let student of students'>
+          <td><a [routerLink]="['/students',  student.idStudente]">
+              {{student.nome}}
+              </a> </td>
+          <td>{{student.cognome}}</td>
+          <td>{{student.codiceFiscale}}</td>
+          <td>{{student.tipoStudente}}</td>
+      </tr>
+  </tbody>
+</table>

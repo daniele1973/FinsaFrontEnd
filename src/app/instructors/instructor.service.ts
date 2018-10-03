@@ -13,7 +13,7 @@ export class InstructorService{
     constructor(private http:HttpClient){
 
     }
-    instructorUrl : string = 'http://localhost:56871/api/Docenti/';
+    instructorUrl : string = 'http://localhost:56871/api/Docenti';
     
     /*
     instructors : Instructor[] = [
@@ -45,5 +45,20 @@ export class InstructorService{
             tap(d => console.log(JSON.stringify(d)))
         );
         
-    }
+   }
+
+   getInstructor(id :number) :Observable<Instructor>{
+    
+      const url = `${this.instructorUrl}/${id}`;
+      return this.http.get<Instructor>(url)
+        .pipe(
+          tap(data => console.log('getInstructor: ' + JSON.stringify(data))),
+          catchError(this.handleError)
+        );
+   }
+
+   private  handleError(err){
+       console.log("ERRORE: " + err);
+       return throwError(err);
+   }
 }

@@ -1,6 +1,11 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { InstructorListComponent } from '../instructors/instructor-list.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { InstructorService } from '../instructors/instructor.service';
+import { Subscription } from 'rxjs';
+import { Instructor } from '../instructors/instructor';
+
 
 @Component({
   selector: 'app-instructor-details',
@@ -9,9 +14,19 @@ import { InstructorListComponent } from '../instructors/instructor-list.componen
 })
 export class InstructorDetailsComponent implements OnInit {
 
-  constructor() { }
+  private sub: Subscription;
+  instructor : Instructor | undefined;
+  constructor(private route: ActivatedRoute,
+    private router: Router,
+    private productService: InstructorService) {
+  }
 
   ngOnInit() {
+    this.sub = this.route.params.subscribe(
+      params => {
+        const id = +params['id'];
+        this.getInstructor(id);
+      });
   }
 
 }

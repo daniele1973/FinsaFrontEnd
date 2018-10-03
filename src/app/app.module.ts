@@ -9,12 +9,15 @@ import { InstructorDetailsComponent } from './instructor-details/instructor-deta
 // import { CourseListComponent } from './course-list/course-list.component'; NON ESISTE PIU
 import { CoursesComponent } from './courses/courses.component';
 import { CoursesModule } from './courses/courses.module';
+import { StudentModule } from "./student/student.module";
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     // CourseListComponent, NON ESISTE PIU
+    StudentDetailsComponent,
     // InstructorDetailsComponent
   ],
   imports: [
@@ -23,9 +26,10 @@ import { CoursesModule } from './courses/courses.module';
     RouterModule.forRoot([
       {path: 'home', component: WelcomeComponent},
       {path: '' , redirectTo: 'home',pathMatch: 'full'},
-      {path:'**', redirectTo:'home',pathMatch:'full'}
+      {path:'**', redirectTo:'home',pathMatch:'full'},
     ]),
-    InstructorModule, CoursesModule,
+    CoursesModule,
+    InstructorModule,StudentModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
