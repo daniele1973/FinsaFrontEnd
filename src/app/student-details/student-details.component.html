@@ -1,4 +1,23 @@
-<p>
-  student-details works!
-</p>
-{{student?.nome}}
+
+<div *ngIf = '(!student) || student.length == 0'>
+  <h3>Non ci sono studenti</h3>
+</div>
+
+<table 
+class="table" id="myTable">
+  <thead>
+      <tr>
+        <th>Cognome</th>
+        <th>Codice Fiscale</th>
+        <th>Tipo Studente</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>{{student.cognome}}</td>
+          <td>{{student.codiceFiscale}}</td>
+          <td>{{student.tipoStudente}}</td>
+      </tr>
+  </tbody>
+</table>
+<h1>prrrrrrrrrrrrrr</h1>
