@@ -12,11 +12,13 @@ import { CoursesModule } from './courses/courses.module';
 import { StudentModule } from "./student/student.module";
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { CourseEditionsComponent } from './course-editions/course-editions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
+    CourseEditionsComponent,
     // CourseListComponent, NON ESISTE PIU
     // StudentDetailsComponent,
     // CourseDetailsComponent //, questo ce lo mette automaticamente "ng gc course-details", ma non va messo in questo modulo bensì nel courses.module.ts
