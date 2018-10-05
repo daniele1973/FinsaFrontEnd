@@ -24,6 +24,10 @@ export class CourseDetailsComponent implements OnInit {
       params => {
         const id = +params['id'];
         this.getCourse(id);
+        console.log('CIAO! ' + params);
+        for(let item in params){
+          console.log('params['+item+']' + " : " + params[item]);
+        }
       });
   }
   getCourse(id: number): any {
