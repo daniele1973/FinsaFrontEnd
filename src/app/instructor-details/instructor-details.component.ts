@@ -44,7 +44,6 @@ private errorMessage='';
                 alert(`FALLIMENTO: error=${error}`);}
     );
   }
-
 }
 
 @NgModule({

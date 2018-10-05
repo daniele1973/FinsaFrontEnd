@@ -5,10 +5,12 @@ import { CommonModule } from "@angular/common";
 import { InstructorDetailsComponent } from "../instructor-details/instructor-details.component";
 import { StudentDetailsComponent } from "../student-details/student-details.component";
 import { AddStudentComponent } from "../add-student/add-student.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     imports:[
         CommonModule,
+        FormsModule,
         RouterModule.forChild([
             {path:'students', component : StudentListComponent},
             { path: 'students/:id', component: StudentDetailsComponent },
@@ -17,7 +19,8 @@ import { AddStudentComponent } from "../add-student/add-student.component";
     ],
     declarations: [
         StudentListComponent,
-        StudentDetailsComponent
+        StudentDetailsComponent,
+        AddStudentComponent
     ]
 })
 export class StudentModule{

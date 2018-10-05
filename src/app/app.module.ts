@@ -20,7 +20,6 @@ import { AddStudentComponent } from './add-student/add-student.component';
     AppComponent,
     WelcomeComponent,
     CourseEditionsComponent,
-    AddStudentComponent,
     // CourseListComponent, NON ESISTE PIU
     // StudentDetailsComponent,
     // CourseDetailsComponent //, questo ce lo mette automaticamente "ng gc course-details", ma non va messo in questo modulo bensì nel courses.module.ts
