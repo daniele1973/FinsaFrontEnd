@@ -13,6 +13,7 @@ import { StudentModule } from "./student/student.module";
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { CourseEditionsComponent } from './course-editions/course-editions.component';
+import { CourseInsertComponent } from './course-insert/course-insert.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 
 @NgModule({
@@ -20,6 +21,8 @@ import { AddStudentComponent } from './add-student/add-student.component';
     AppComponent,
     WelcomeComponent,
     CourseEditionsComponent,
+    // CourseInsertComponent, //questo ce lo mette automaticamente "ng gc course-details", ma non va messo in questo modulo bensì nel courses.module.ts
+    AddStudentComponent,
     // CourseListComponent, NON ESISTE PIU
     // StudentDetailsComponent,
     // CourseDetailsComponent //, questo ce lo mette automaticamente "ng gc course-details", ma non va messo in questo modulo bensì nel courses.module.ts

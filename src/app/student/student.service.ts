@@ -17,9 +17,16 @@ export class StudentService{
 
     getAllStudents() : Observable<Student[]>{
        // return this.instructors;
-        return this.http.get<Student[]>(this.studentUrl).pipe(
-            tap(d => console.log(JSON.stringify(d)))
-        );
-        
+            return this.http.get<Student[]>(this.studentUrl)
+            .pipe(
+                tap(d => console.log(JSON.stringify(d))),
+                catchError(this.handleError)
+            ); 
+    }
+
+    handleError() {
+        alert("Errore di sbaglio!")
+        // throw new Error("Method not implemented.");
+        return throwError("Errore di sbaglio!");
     }
 }

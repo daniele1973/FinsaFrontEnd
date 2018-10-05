@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Course } from "./course";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
+import { CourseForInsert } from "../course-insert/courseForInsert";
 
 
 @Injectable({ //inietta questo a chi ne fa richiesta
@@ -17,10 +18,11 @@ export class CourseService{
 
     getAllCourses() : Observable<Course[]>{
        // return this.instructors;
-        return this.http.get<Course[]>(this.courseUrl).pipe(
-            tap(d => console.log(JSON.stringify(d)))
-        );
-        
+        return this.http.get<Course[]>(this.courseUrl)
+            .pipe(
+                tap(d => console.log(JSON.stringify(d))),
+                catchError(this.handleError)
+            );
    }
 
    getCourse(id :number) :Observable<Course>{
@@ -33,8 +35,23 @@ export class CourseService{
         );
    }
 
-   private  handleError(err){
-       console.log("ERRORE: " + err);
-       return throwError(err);
-   }
+   createCourse(course: CourseForInsert) : Observable<CourseForInsert>{
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json' }); //vi ricordate Postman per fare una POST in json? L'effetto è modificare l'header che verrà inviato al server per dirgli che gli manderete un json
+    // product.id = null; //credo che sia necessario per il mock db InMemory, che se il product ha un id va nei casini. Voi non dovreste farlo con un db vero... 
+    
+    // alert('asd');
+
+   return  this.http.post<CourseForInsert>(this.courseUrl, course);
+
+
+  }
+
+  
+  private  handleError(err){
+    console.log("ERRORE: ");
+    console.log(err);
+    alert(err.name +"\n"+err.message);
+    return throwError(err);
+  }
+
 }

@@ -1,0 +1,58 @@
+<h3>
+  Inserisci un nuovo Corso
+</h3>
+<div class="scheda">
+<div class="scheda-testata">
+  <div class="scheda-corpo">
+    <!-- novalidate è diventato di default nei form: per disabilitarlo inserire l'attributo ngNativeValidate -->
+    <form  
+          
+          (ngSubmit)="conferma(myFirstNgForm)"
+          #myFirstNgForm="ngForm">
+      <table>
+        <tr class="line-group">
+          <th><label for="TitoloCorso_Id">Titolo</label></th>
+          <td><input id="TitoloCorso_Id" 
+                     name="titolo" 
+                     type="text" 
+                     required 
+                     minlength="3"
+                     [(ngModel)]=corsoDaInserire.titolo
+                     #titoloCorsoInput="ngModel" />
+          </td>
+        </tr>
+        <tr class="line-group">
+          <th><label for="PrezzoBase_Id">Prezzo Base</label></th>
+          <td><input id="PrezzoBase_Id" 
+                     name="prezzoBase" 
+                     type="number"
+                     min="0"
+                     [(ngModel)]=corsoDaInserire.prezzoBase
+                     #prezzoBaseInput="ngModel" />
+          </td>
+        </tr>
+        <tr class="line-group">
+          <th><label for="Difficilta_Id">Difficolt&agrave;</label></th>
+          <td><input id="Difficilta_Id" 
+                     name="difficolta" 
+                     type="number"
+                     min="0"
+                     [(ngModel)]=corsoDaInserire.difficolta
+                     #prezzoBaseInput='ngModel' />
+          </td>
+        </tr>
+        <tr>
+          <th>
+              !myFirstNgForm.valid={{!myFirstNgForm.valid}}
+          </th>
+          <td style="text-align: right;">
+            <button type="submit"
+                    [disabled]="!myFirstNgForm.valid">Inserisci</button>
+          </td>
+        </tr>
+      </table>
+      
+    </form>
+  </div>
+</div>
+</div>
