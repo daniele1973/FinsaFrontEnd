@@ -26,10 +26,10 @@ export class CourseInsertComponent implements OnInit {
     console.log(myFirstNgForm);
     
     let debug_serverResponse = this.courseService.createCourse(this.corsoDaInserire);
-    // debug_serverResponse.subscribe(this.notifica)
+    debug_serverResponse.subscribe(this.notifica)
     console.log(debug_serverResponse);
 
-    alert("ragginta la fine di  conferma(myFirstNgForm :NgForm)");
+    // alert("ragginta la fine di  conferma(myFirstNgForm :NgForm)");
   }
   notifica(notifica: CourseForInsert) {
     console.log(notifica);
