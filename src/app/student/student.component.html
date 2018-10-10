@@ -2,25 +2,27 @@
 <div *ngIf = '(!students) || students.length == 0'>
   <h3>Non ci sono studenti</h3>
 </div>
+<p><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{ exact: true }"
+    [routerLink]="['/addstudent']">Aggiungi Studente</a>
+</p>
 
 <table *ngIf = 'students && students.length'
 class="table" id="myTable">
   <thead>
       <tr>
         <th>Nome</th>
-        <th>Cognome</th>
-        <th>Codice Fiscale</th>
-        <th>Tipo Studente</th>
       </tr>
   </thead>
   <tbody>
       <tr *ngFor ='let student of students'>
           <td><a [routerLink]="['/students',  student.idStudente]">
               {{student.nome}}
-              </a> </td>
-          <td>{{student.cognome}}</td>
-          <td>{{student.codiceFiscale}}</td>
-          <td>{{student.tipoStudente}}</td>
+              </a> 
+            </td>
+            <td><a [routerLink]="['/studentenrollment',  student.idStudente]">
+                Iscrivi a un'Edizione Corso
+                </a> 
+            </td>
       </tr>
   </tbody>
 </table>

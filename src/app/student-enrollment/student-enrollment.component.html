@@ -1,0 +1,30 @@
+<h2>Iscrivi lo studente {{student.id}} a un'Edizione Corso</h2>
+
+<table *ngIf = 'edizCourse && edizCourse.length'
+class="table" id="myTable">
+  <thead>
+      <tr>
+        <th>ID Edizione Corso</th>
+        <th>ID Corso</th>
+        <th>Data inizio</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor ='let Ecorsi of edizCourse'>
+          <td><a>
+              {{Ecorsi.idEdizioneCorso}}
+              </a> 
+            </td>
+            <td><a>
+              {{Ecorsi.idCorso}}
+              </a> 
+            </td>
+            <td><a>
+              {{Ecorsi.dataInizio}}
+                </a> 
+            </td>
+            <td><button onclick="Iscrivi(Ecorsi.idEdizioneCorso);">Iscrivi</button> 
+            </td>
+      </tr>
+  </tbody>
+</table>

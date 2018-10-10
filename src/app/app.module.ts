@@ -15,12 +15,14 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { CourseEditionsComponent } from './course-editions/course-editions.component';
 import { CourseInsertComponent } from './course-insert/course-insert.component';
 import { AddStudentComponent } from './add-student/add-student.component';
+import { StudentEnrollmentComponent } from './student-enrollment/student-enrollment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     CourseEditionsComponent,
+    StudentEnrollmentComponent,
     // CourseInsertComponent, //questo ce lo mette automaticamente "ng gc course-details", ma non va messo in questo modulo bensì nel courses.module.ts
     // CourseListComponent, NON ESISTE PIU
     // StudentDetailsComponent,
