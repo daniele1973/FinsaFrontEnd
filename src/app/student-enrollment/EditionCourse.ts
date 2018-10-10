@@ -1,5 +1,5 @@
-export interface ECourse{
+export interface ECourse {
     idEdizioneCorso: number;
-    idCorsi: number;
+    idCorso: number;
     dataInizio: Date;
 }

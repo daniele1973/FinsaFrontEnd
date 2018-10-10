@@ -14,6 +14,7 @@ export class StudentEnrollmentService{
 
     }
     edCourseUrl : string = 'http://localhost:56871/api/EdizioniCorsi/';
+    CourseStudentUrl: string= 'http://localhost:56871/api/CorsiAllievi/';
 
     getAllECourse() : Observable<ECourse[]>{
        // return this.instructors;
@@ -21,7 +22,7 @@ export class StudentEnrollmentService{
             .pipe(
                 tap(d => console.log(JSON.stringify(d))),
                 catchError(this.handleError)
-            ); 
+            );
     }
 
     handleError() {
