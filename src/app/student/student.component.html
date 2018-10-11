@@ -2,8 +2,8 @@
 <div *ngIf = '(!students) || students.length == 0'>
   <h3>Non ci sono studenti</h3>
 </div>
-<p><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{ exact: true }"
-    [routerLink]="['/addstudent']">Aggiungi Studente</a>
+<p><button class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{ exact: true }"
+    [routerLink]="['/addstudent']">Aggiungi Studente</button>
 </p>
 
 <table *ngIf = 'students && students.length'
@@ -17,11 +17,11 @@ class="table" id="myTable">
       <tr *ngFor ='let student of students'>
           <td><a [routerLink]="['/students',  student.idStudente]">
               {{student.nome}}
-              </a> 
+              </a>
             </td>
             <td><a [routerLink]="['/studentenrollment',  student.idStudente]">
                 Iscrivi a un'Edizione Corso
-                </a> 
+                </a>
             </td>
       </tr>
   </tbody>

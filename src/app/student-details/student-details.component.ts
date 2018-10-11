@@ -19,7 +19,7 @@ export class StudentDetailsComponent implements OnInit {
   id: number;
   errorMessage : string = "tutto OK";
   private sub: Subscription;
-  studentFCUrl : string; 
+  studentFCUrl : string;
 
 
   constructor(private route: ActivatedRoute,
@@ -50,7 +50,7 @@ export class StudentDetailsComponent implements OnInit {
             ).subscribe(
               instr => this.listCourse = instr,
               err => this.errorMessage = <any>err
-          ); 
+          );
     }
     handleError() {
       alert("Errore di sbaglio!")

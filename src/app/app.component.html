@@ -5,7 +5,7 @@
   </a>
 </div>
 
-<nav class='navbar navbar-expand navbar-light bg-light'> 
+<nav class='navbar navbar-expand navbar-light bg-light'>
 
   <ul class='nav nav-pills'>
     <li><a class='nav-link' routerLinkActive='active'
@@ -18,13 +18,13 @@
       [routerLink]="['/courses']">Corsi</a>
     </li>
     <li><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{ exact: true }"
-      [routerLink]="['/students']">Visualizza Studenti</a>
+      [routerLink]="['/students']">Studenti</a>
     </li>
   </ul>
 </nav>
 
 <div class='container'>
-  
+
 <router-outlet></router-outlet>
 
 </div>

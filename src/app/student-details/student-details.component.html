@@ -3,7 +3,7 @@
   <h3>Non ci sono studenti</h3>
 </div>
 
-<table 
+<table
 class="table" id="myTable">
   <thead>
       <tr>
@@ -19,26 +19,26 @@ class="table" id="myTable">
           <td>{{student.cognome}}</td>
           <td>{{student.codiceFiscale}}</td>
           <td>{{student.tipoStudente}}</td>
-          <td><button (click)="DammiICorsi()">Lista Corsi</button></td>
+          <td><button (click)="DammiICorsi()">Lista Corsi Iscritto</button></td>
       </tr>
   </tbody>
 </table>
 <form *ngIf='listCourse.length>0'>
-    <table>
+    <thead>
         <tr>
           <th>ID Corso</th>
           <th>Titolo C.</th>
           <th>Prezzo</th>
           <th>Difficoltà</th>
         </tr>
-    </table>
-  <table *ngFor= 'let corsi of listCourse'>
+    </thead>
+  <tbody *ngFor= 'let corsi of listCourse'>
       <tr>
           <td>{{corsi.idCorso }}</td>
           <td>{{corsi.titolo}}</td>
           <td>{{corsi.prezzoBase}}</td>
           <td>{{corsi.difficolta}}</td>
       </tr>
-  </table>
+  </tbody>
 
 </form>
