@@ -7,7 +7,7 @@ import { StudentForm } from "./customerStudent";
 import { NgForm } from "@angular/forms";
 
 
-@Injectable({ //inietta questo a chi ne fa richiesta
+@Injectable({
     providedIn: 'root'
   })
 export class StudentAddService{

@@ -16,6 +16,8 @@ import { CourseEditionsComponent } from './course-editions/course-editions.compo
 import { CourseInsertComponent } from './course-insert/course-insert.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { StudentEnrollmentComponent } from './student-enrollment/student-enrollment.component';
+import { InstructorInsertComponent } from './instructor-insert/instructor-insert.component';
+import { InstructorEnrollmentComponent } from './instructor-enrollment/instructor-enrollment.component';
 
 @NgModule({
   declarations: [
