@@ -16,12 +16,12 @@ import { CourseEditionsComponent } from './course-editions/course-editions.compo
 import { CourseInsertComponent } from './course-insert/course-insert.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { StudentEnrollmentComponent } from './student-enrollment/student-enrollment.component';
-<<<<<<< HEAD
+
 import { StudentDeleteComponent } from './student-delete/student-delete.component';
-=======
+
 import { InstructorInsertComponent } from './instructor-insert/instructor-insert.component';
 import { InstructorEnrollmentComponent } from './instructor-enrollment/instructor-enrollment.component';
->>>>>>> c47b1d8aee188bf623560b9084d408020682e29d
+
 
 @NgModule({
   declarations: [
@@ -45,7 +45,7 @@ import { InstructorEnrollmentComponent } from './instructor-enrollment/instructo
       {path:'**', redirectTo:'home',pathMatch:'full'}
     ]),
     CoursesModule,
-    InstructorModule,StudentModule 
+    InstructorModule,StudentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
