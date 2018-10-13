@@ -7,16 +7,18 @@ import { StudentDetailsComponent } from "../student-details/student-details.comp
 import { AddStudentComponent } from "../add-student/add-student.component";
 import { FormsModule } from "@angular/forms";
 import { StudentEnrollmentComponent } from "../student-enrollment/student-enrollment.component";
+import { StudentDeleteComponent } from "../student-delete/student-delete.component";
 
 @NgModule({
     imports:[
         CommonModule,
         FormsModule,
         RouterModule.forChild([
-            {path:'students', component : StudentListComponent},
+            {path: 'students', component : StudentListComponent},
             { path: 'students/:id', component: StudentDetailsComponent },
             { path: 'addstudent', component: AddStudentComponent },
-            { path: 'studentenrollment/:id', component: StudentEnrollmentComponent }
+            { path: 'studentenrollment/:id', component: StudentEnrollmentComponent },
+            { path: 'studentdelete/:id', component: StudentDeleteComponent }
         ])
     ],
     declarations: [

@@ -16,6 +16,7 @@ import { CourseEditionsComponent } from './course-editions/course-editions.compo
 import { CourseInsertComponent } from './course-insert/course-insert.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { StudentEnrollmentComponent } from './student-enrollment/student-enrollment.component';
+import { StudentDeleteComponent } from './student-delete/student-delete.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { StudentEnrollmentComponent } from './student-enrollment/student-enrollm
     WelcomeComponent,
     CourseEditionsComponent,
     StudentEnrollmentComponent,
+    StudentDeleteComponent,
     // CourseInsertComponent, //questo ce lo mette automaticamente "ng gc course-details", ma non va messo in questo modulo bensì nel courses.module.ts
     // CourseListComponent, NON ESISTE PIU
     // StudentDetailsComponent,

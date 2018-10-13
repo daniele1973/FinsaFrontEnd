@@ -19,10 +19,14 @@ class="table" id="myTable">
               {{student.nome}}
               </a>
             </td>
-            <td><a [routerLink]="['/studentenrollment',  student.idStudente]">
+            <td><button [routerLink]="['/studentenrollment',  student.idStudente]">
                 Iscrivi a un'Edizione Corso
-                </a>
+            </button>
             </td>
+            <td><button [routerLink]="['/studentdelete',  student.idStudente]">
+              Elimina Studente
+          </button>
+          </td>
       </tr>
   </tbody>
 </table>
