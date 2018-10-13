@@ -1,0 +1,147 @@
+<div class="instructor">
+  <div class="instructor-header">
+    Aggiungi Docente
+  </div>
+
+  <div class="instructor-body">
+    <form novalidate
+          autocomplete="off"
+          (ngSubmit)="save(signupForm)"
+          #signupForm="ngForm">
+
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"
+               for="firstNameId">Name</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="firstNameId"
+                 type="text"
+                 placeholder="Name (required)"
+                 required
+                 minlength="3"
+                 [(ngModel)]=customer.nome
+                 name="nome"
+                 #firstNameVar="ngModel"
+                 [ngClass]="{'is-invalid': (firstNameVar.touched || firstNameVar.dirty) && !firstNameVar.valid }" />
+          <span class="invalid-feedback">
+            <span *ngIf="firstNameVar.errors?.required">
+              Please enter your first name.
+            </span>
+            <span *ngIf="firstNameVar.errors?.minlength">
+              The first name must be longer than 3 characters.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"
+               for="lastNameId">Cognome</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="lastNameId"
+                 type="text"
+                 placeholder="Last Name (required)"
+                 required
+                 maxlength="50"
+                 [(ngModel)]="customer.cognome"
+                 name="cognome"
+                 #lastNameVar="ngModel"
+                 [ngClass]="{'is-invalid': (lastNameVar.touched || lastNameVar.dirty) && !lastNameVar.valid }" />
+          <span class="invalid-feedback">
+            <span *ngIf="lastNameVar.errors?.required">
+              Please enter your last name.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"
+               for="emailId">Codice Fiscale</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="codFId"
+                 type="text"
+                 placeholder="C.F. (required)"
+                 required
+                 [(ngModel)]="customer.cF"
+                 name="cF"
+                 #codFVar="ngModel"
+                 [ngClass]="{'is-invalid': (codFVar.touched || codFVar.dirty) && !codFVar.valid }" />
+          <span class="invalid-feedback">
+            <span *ngIf="codFVar.errors?.required">
+              Please enter your C.F.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"
+               for="typeInstructor">Tipo Docente</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="typeInstructor"
+                 type="text"
+                 placeholder="Type (required)"
+                 required
+                 maxlength="20"
+                 [(ngModel)]=customer.tipoDocente
+                 name="tipoDocente"
+                 #TypeVar="ngModel"
+                 [ngClass]="{'is-invalid': (TypeVar.touched || TypeVar.dirty) && !TypeVar.valid }" />
+          <span class="invalid-feedback">
+            <span *ngIf="TypeVar.errors?.required">
+              Please enter your type.
+            </span>
+            <span *ngIf="TypeVar.errors?.maxlength">
+              The type must be short than 20 characters.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"
+               for="typeInstructor">Data di nascita</label>
+        <div class="col-md-8">
+          <input class="form-control"
+                 id="typeInstructor"
+                 type="date"
+                 placeholder="Type (required)"
+                 required
+                 maxlength="20"
+                 [(ngModel)]=customer.dataNascita
+                 name="dataNascita"
+                 #TypeVar="ngModel"
+                 [ngClass]="{'is-invalid': (TypeVar.touched || TypeVar.dirty) && !TypeVar.valid }" />
+          <span class="invalid-feedback">
+            <span *ngIf="TypeVar.errors?.required">
+              Please enter your type.
+            </span>
+            <span *ngIf="TypeVar.errors?.maxlength">
+              The type must be short than 20 characters.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-4">
+          <span>
+            <button class="btn btn-primary"
+                    type="submit"
+                    [disabled]="!signupForm.valid">
+              Save
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br>Dirty: {{ signupForm.dirty }}
+<br>Touched: {{ signupForm.touched }}
+<br>Valid: {{ signupForm.valid }}
+<br>Value: {{ signupForm.value | json }}
