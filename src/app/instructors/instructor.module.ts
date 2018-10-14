@@ -6,6 +6,7 @@ import { InstructorDetailsComponent } from "../instructor-details/instructor-det
 import { InstructorInsertComponent } from "../instructor-insert/instructor-insert.component";
 import { FormsModule } from "@angular/forms";
 import { InstructorEnrollmentComponent } from "../instructor-enrollment/instructor-enrollment.component";
+import { InstructorDeleteComponent } from "../instructor-delete/instructor-delete.component";
 
 
 
@@ -17,14 +18,16 @@ import { InstructorEnrollmentComponent } from "../instructor-enrollment/instruct
             {path:'instructors', component : InstructorListComponent},
             {path:'instructors/:id', component : InstructorDetailsComponent},
             {path:'addinstructor', component : InstructorInsertComponent},
-            {path:'iscriviCorso/:id', component : InstructorEnrollmentComponent}
+            {path:'iscriviCorso/:id', component : InstructorEnrollmentComponent},
+            {path:'instructorDelete/:id', component : InstructorDeleteComponent}
         ])
     ],
     declarations: [
         InstructorListComponent,
         InstructorDetailsComponent,
         InstructorInsertComponent,
-        InstructorEnrollmentComponent
+        InstructorEnrollmentComponent,
+        InstructorDeleteComponent
         
     ]
 })
