@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {background-color: rgb(243, 236, 224);}
+/* nav,ul,li{text-align: center;align-content: center;align-items: center} */
+button {
+    background-color: lightgray; /* colore di sfondo    */
+    /* border: 2px solid powderblue; bordo dell'elemento */
+    color: rgb(7, 6, 6);               /* colore del testo    */
+    font-weight: bold;         /* testo in grassetto  */
+    padding: 0;                /* padding             */
+    height: 65px;              /* altezza             */
+    width: 85px;               /* larghezza           */
+  }
+

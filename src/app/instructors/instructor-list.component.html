@@ -2,42 +2,42 @@
 <div *ngIf = '(!instructors) || instructors.length == 0'>
     <h3>Non ci sono instruttori</h3>
 </div>
-<div>
-    <button class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{ exact: true }"
-    [routerLink]="['/addinstructor']">Aggiungi Docente</button>
-</div>
 
 <table *ngIf = 'instructors && instructors.length'
 class="table" id="myTable">
     <thead>
         <tr>
-        <th>Nome</th>
         <th>Cognome</th>
-        <th>Data di nascita</th>
+        <th>Nome</th>
+        <!-- <th>Data di nascita</th>
         <th>Età</th>
         <th>Tipo docente</th>
-        <th>Codice fiscale</th>
+        <th>Codice fiscale</th> -->
 
         </tr>
     </thead>
     <tbody>
         <tr *ngFor ='let instructor of instructors'>
             <td><a [routerLink]="['/instructors',  instructor.idDocente]">
-                {{instructor.nome}}
+                {{instructor.cognome}}
                 </a> </td>
-            <td>{{instructor.cognome}}</td>
-            <td>{{instructor.dataNascita | date}}</td>
-            <td>{{instructor.eta}}</td>
-            <td>{{instructor.tipoDocente}}</td>
-            <td>{{instructor.cf}}</td>
-            <td><a [routerLink]="['/iscriviCorso',  instructor.idDocente]">
-                Iscrivi a un'Edizione Corso
-                </a>
-            </td>
+            <td>{{instructor.nome}}</td>
+                <!-- <td>{{instructor.dataNascita | date}}</td>
+                <td>{{instructor.eta}}</td>
+                <td>{{instructor.tipoDocente}}</td>
+                <td>{{instructor.cf}}</td>
+                <td><a [routerLink]="['/iscriviCorso',  instructor.idDocente]">
+                    Iscrivi a un'Edizione Corso
+                    </a>
+                </td> -->
             <td><button [routerLink]="['/instructorDelete',  instructor.idDocente]">
                 Elimina
             </button>
             </td>
         </tr>
     </tbody>
+    <div>
+        <button class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/addinstructor']">Aggiungi Docente</button>
+    </div>
 </table>
