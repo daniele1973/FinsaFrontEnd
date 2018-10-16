@@ -18,7 +18,7 @@ import { InstructorDeleteComponent } from "../instructor-delete/instructor-delet
             {path:'instructors', component : InstructorListComponent},
             {path:'instructors/:id', component : InstructorDetailsComponent},
             {path:'addinstructor', component : InstructorInsertComponent},
-            {path:'iscriviCorso/:id', component : InstructorEnrollmentComponent},
+            {path:'instructorenrollment/:id', component : InstructorEnrollmentComponent},
             {path:'instructorDelete/:id', component : InstructorDeleteComponent}
         ])
     ],
@@ -26,8 +26,8 @@ import { InstructorDeleteComponent } from "../instructor-delete/instructor-delet
         InstructorListComponent,
         InstructorDetailsComponent,
         InstructorInsertComponent,
-        InstructorEnrollmentComponent,
-        InstructorDeleteComponent
+        InstructorDeleteComponent,
+        InstructorEnrollmentComponent
         
     ]
 })

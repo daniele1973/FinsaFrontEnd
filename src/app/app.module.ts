@@ -20,7 +20,6 @@ import { StudentEnrollmentComponent } from './student-enrollment/student-enrollm
 import { StudentDeleteComponent } from './student-delete/student-delete.component';
 
 import { InstructorInsertComponent } from './instructor-insert/instructor-insert.component';
-import { InstructorEnrollmentComponent } from './instructor-enrollment/instructor-enrollment.component';
 
 
 @NgModule({

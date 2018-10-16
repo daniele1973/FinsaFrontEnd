@@ -8,13 +8,13 @@ import { catchError, tap, map } from 'rxjs/operators';
 @Injectable({ //inietta questo a chi ne fa richiesta
     providedIn: 'root'
   })
-export class StudentEnrollmentService{
+export class InstructorEnrollmentService{
 
     constructor(private http:HttpClient){
 
     }
     edCourseUrl : string = 'http://localhost:56871/api/EdizioniCorsi/';
-    CourseStudentUrl: string= 'http://localhost:56871/api/CorsiDocenti/';
+    CourseInstructorUrl: string= 'http://localhost:56871/api/CorsiDocenti/';
 
     getAllECourse() : Observable<ECourse[]>{
        // return this.instructors;
